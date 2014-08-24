@@ -51,6 +51,7 @@ header {
   position: fixed;
   right: 0;
   left: 0;
+  z-index: 100; //ensure header is always above everything
 
   // ------ Gradient ------
   background: -moz-linear-gradient(top,  rgba(0,17,30,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
@@ -293,12 +294,13 @@ footer {
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
+  body {
+    font-size: 12px; //scale down ems by 25%
+  }
+
   header {
-    height: 2.5em;
 
     .cat-logo {
-      width: 4em;
-      height: auto;
       margin-left: .75em;
     }
 
@@ -307,30 +309,48 @@ and (max-device-width : 480px) {
     }
 
     .hamburger-btn {
-      margin-right: .75em;
-      width: .8125em;
-      height: auto;
+      margin-right: .5em;
     }
   }
 
   #banner {
 
+    .banner-pic {
+      background-size: cover;
+      min-height: 24em;
+    }
+
+    .lead {
+      margin-top: 5em;
+      margin-bottom: .2em;
+    }
+
     .btn {
-      // width: ;
-      // height: ;
+      min-height: 1.5em;
+      font-size: 1em;
+      letter-spacing: 1px;
     }
   }
 
   #blog-posts {
-    margin-top: 1em;
+
   }
 
   #features-overview {
 
+    .pic-right {
+      margin: 0;
+      float: none;
+    }
+
+    .pic-left {
+      margin: 0;
+      float: none;
+    }
   }
 
   footer {
-
+    margin-top: 0;
   }
 }
 
