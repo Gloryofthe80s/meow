@@ -1,0 +1,302 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+// bower:scss
+@import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
+// endbower
+
+// ------ VARIABLES ------
+
+$light-gray : #B7B9BC;
+$navy : #434951;
+$dark-blue : #232A3B;
+$blue : #AEDEE4;
+$green : #C9E298;
+$btn-green : #79B600;
+$pink : #FDD7F5;
+
+// ------ BASICS ------
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  color: $navy;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.helper { // -- used for getting pure CSS vertical align
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.btn {
+  background-color: $btn-green;
+  color: #FFFFFF;
+  border-radius: 3px;
+  border: none;
+  font-size: 16px;
+  font-weight: lighter;
+  letter-spacing: 1.6px;
+}
+
+// ------ HEADER ------
+
+header {
+  height: 80px;
+  position: fixed;
+  right: 0;
+  left: 0;
+
+  // ------ Gradient ------
+  background: -moz-linear-gradient(top,  rgba(0,17,30,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,17,30,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,17,30,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,17,30,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,17,30,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,17,30,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a600111e', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+  .cat-logo {
+    vertical-align: middle;
+    margin-left: 18px;
+  }
+
+  .position-helper {
+    height: 80px; // match header height for vertical align
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .nav-menu-container {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+
+    .nav-menu-text {
+      vertical-align: middle;
+      margin-right: 10px;
+      height: 100%;
+      right: 120px;
+      font-size: 17px;
+      color: #FFFFFF;
+      letter-spacing: 2.6px;
+    }
+
+    .hamburger-btn {
+      margin-right: 30px;
+      display: inline-block;
+      vertical-align: middle;
+      right: 20px;
+      width: 26px;
+      height: 26px;
+    }
+  }
+}
+
+.nav-hover-active {
+  border: 1px solid red;
+}
+
+// ------ BANNER ------
+
+#banner {
+
+  .banner-pic {
+    background-image: url(../../images/kitty_banner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    min-height: 700px;
+  }
+
+  .banner-contents {
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    // border: 1px solid red;
+    text-align: center;
+  }
+
+  .lead {
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 200px;
+  }
+
+  .btn {
+    min-height: 50px;
+    margin: 0px auto;
+  }
+}
+
+// ------ BLOG POSTS ------
+
+#blog-posts {
+  margin-top: 100px;
+}
+
+.blog-post-container {
+  border: 1px solid $light-gray;
+  border-top: 6px solid $light-gray; //default is gray
+  min-height: 320px;
+  padding: 10px 20px;
+}
+
+//these represent colors, style/swap at will
+.primary {
+  border-top: 6px solid $green;
+}
+
+.secondary {
+  border-top: 6px solid $blue;
+}
+
+.tertiary {
+  border-top: 6px solid $pink;
+}
+
+//the container for the Backbone view (actual blog post contents)
+.blog-post-contents {
+
+}
+
+.post-date {
+  display: inline-block;
+  color: $light-gray;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.post-title {
+  display: inline-block;
+  font-size: 23px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.post-expand {
+  display: inline-block;
+  position: absolute;
+  font-size: 14px;
+  letter-spacing: 1.6px;
+  color: $light-gray;
+  bottom: 30px;
+  // -- create spaced underline
+  border-bottom: 1px solid $light-gray;
+  padding-bottom: 5px;
+}
+
+// ------ FEATURES OVERVIEW ------
+
+#features-overview {
+  margin-top: 80px;
+
+  .row {
+    margin-bottom: 50px;
+  }
+
+  img {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .text-container {
+
+  }
+
+  .pic-right {
+    float: right;
+    margin-left: 50px;
+    margin-right: 120px;
+  }
+
+  .pic-left {
+    float: left;
+    margin-right: 50px;
+    margin-left: 120px;
+  }
+
+  h2 {
+    font-size: 21px;
+    font-weight: lighter;
+    letter-spacing: 2.3px;
+    margin-bottom: 22px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 1.6;
+  }
+}
+
+
+
+// ------ FOOTER ------
+
+footer {
+  margin-top: 100px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  min-height: 300px;
+  background-color: $dark-blue;
+
+  span {
+    color: #FFFFFF;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    font-weight: lighter;
+  }
+
+  .links-title {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  a {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: lighter;
+    width: 100%;
+  }
+
+  form {
+    margin-top: 20px;
+  }
+
+  .form-control {
+    margin-bottom: 14px;
+    min-width: 260px;
+    min-height: 46px;
+    border-radius: 0;
+  }
+
+  .btn {
+    min-width: 190px;
+    min-height: 46px;
+  }
+}
+
+
+
+// ------ MEDIA QUERIES ------
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+}
+
+
+@media screen
+and (min-width : 768px) {
+
+}
