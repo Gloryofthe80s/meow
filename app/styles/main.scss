@@ -34,9 +34,11 @@ body {
     vertical-align: middle;
 }
 
+.btn-default { //override BS button styling
+  @include button-variant(#FFFFFF, $btn-green, #FFFFFF);
+}
+
 .btn {
-  background-color: $btn-green;
-  color: #FFFFFF;
   border-radius: .2em;
   border: none;
   font-size: 1em;
@@ -258,7 +260,15 @@ footer {
   .links-title {
     display: inline-block;
     width: 100%;
-    margin-bottom: 1.25em;
+    margin-bottom: 1.5em;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
   }
 
   a {
@@ -351,6 +361,40 @@ and (max-device-width : 480px) {
 
   footer {
     margin-top: 0;
+    padding-top: 0;
+
+    .col-md-6 {
+      padding: 0 3em;
+    }
+
+    .container {
+      padding: 0;
+    }
+
+    .links-title-container {
+      border-bottom: 1px solid $light-gray;
+    }
+
+    .links-title {
+      padding: 1em 0;
+      margin: 0;
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    ul {
+      display: none;
+    }
+
+    .col-md-6 {
+      span {
+        display: block;
+        margin-top: 2em;
+        font-size: 1.12em;
+        letter-spacing: 1.5px;
+        text-align: center;
+      }
+    }
   }
 }
 
