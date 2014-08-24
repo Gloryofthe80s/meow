@@ -5,6 +5,8 @@ var BlogPostView = Backbone.View.extend({
     tagName: 'div',
     className: 'blog-post-contents',
 
+    createTemplate: _.template($('#player-score-template').text()),
+
     events: {
 
     },
@@ -16,9 +18,10 @@ var BlogPostView = Backbone.View.extend({
     },
 
     render: function() {
-        var rendered= this.$el.html('<span>Right on!</span>');
-        rendered.hide().fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).delay(1000).fadeOut('slow', function() {
-            this.remove();
-        });
+        var renderedTemplate = this.createTemplate(this.model.attributes);
+
+        var rendered = this.$el.html(renderedTemplate);
+
+        rendered.hide().fadeIn('slow');
     }
 });

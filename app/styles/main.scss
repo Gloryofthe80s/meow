@@ -25,6 +25,7 @@ $pink : #FDD7F5;
 body {
   color: $navy;
   font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px; //base for ems
 }
 
 .helper { // -- used for getting pure CSS vertical align
@@ -36,9 +37,9 @@ body {
 .btn {
   background-color: $btn-green;
   color: #FFFFFF;
-  border-radius: 3px;
+  border-radius: .2em;
   border: none;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: lighter;
   letter-spacing: 1.6px;
 }
@@ -46,7 +47,7 @@ body {
 // ------ HEADER ------
 
 header {
-  height: 80px;
+  height: 5em;
   position: fixed;
   right: 0;
   left: 0;
@@ -62,11 +63,11 @@ header {
 
   .cat-logo {
     vertical-align: middle;
-    margin-left: 18px;
+    margin-left: 1.125em;
   }
 
   .position-helper {
-    height: 80px; // match header height for vertical align
+    height: 5em; // match header height for vertical align
     vertical-align: middle;
     text-align: center;
   }
@@ -75,24 +76,25 @@ header {
     position: absolute;
     display: inline-block;
     right: 0;
+    float: right;
 
     .nav-menu-text {
       vertical-align: middle;
-      margin-right: 10px;
+      margin-right: .625em;
       height: 100%;
-      right: 120px;
-      font-size: 17px;
+      right: 7.5em;
+      font-size: 1.1em;
       color: #FFFFFF;
       letter-spacing: 2.6px;
     }
 
     .hamburger-btn {
-      margin-right: 30px;
+      margin-right: 1.8em;
       display: inline-block;
       vertical-align: middle;
-      right: 20px;
-      width: 26px;
-      height: 26px;
+      right: 1.25em;
+      width: 1.625em;
+      height: 1.625em;
     }
   }
 }
@@ -110,7 +112,7 @@ header {
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
-    min-height: 700px;
+    min-height: 43.75em;
   }
 
   .banner-contents {
@@ -125,11 +127,11 @@ header {
     display: block;
     color: #FFFFFF;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 2em;
   }
 
   .btn {
-    min-height: 50px;
+    min-height: 3.125em;
     margin: 0px auto;
   }
 }
@@ -137,17 +139,19 @@ header {
 // ------ BLOG POSTS ------
 
 #blog-posts {
-  margin-top: 100px;
+  margin-top: 3em;
 }
 
 .blog-post-container {
   border: 1px solid $light-gray;
   border-top: 6px solid $light-gray; //default is gray
-  min-height: 320px;
-  padding: 10px 20px;
+  min-height: 20em;
+  max-height: 20em;
+  padding: .625em 1.25em;
+  margin-top: 1em;
 }
 
-//these represent colors, style/swap at will
+//add these to .blog-post-container to specify border top colors
 .primary {
   border-top: 6px solid $green;
 }
@@ -168,24 +172,26 @@ header {
 .post-date {
   display: inline-block;
   color: $light-gray;
-  font-size: 12px;
-  margin-top: 30px;
+  font-size: .75em;
+  margin-top: 1.8em;
 }
 
 .post-title {
   display: inline-block;
-  font-size: 23px;
+  font-size: 1.45em;
   line-height: 1.6;
-  margin-bottom: 18px;
+  margin-bottom: 1.125em;
+  max-height: 8em;
+  overflow: hidden; //prevents a long title from overlapping box
 }
 
 .post-expand {
   display: inline-block;
   position: absolute;
-  font-size: 14px;
+  font-size: .875em;
   letter-spacing: 1.6px;
   color: $light-gray;
-  bottom: 30px;
+  bottom: 1.8em;
   // -- create spaced underline
   border-bottom: 1px solid $light-gray;
   padding-bottom: 5px;
@@ -194,15 +200,15 @@ header {
 // ------ FEATURES OVERVIEW ------
 
 #features-overview {
-  margin-top: 80px;
+  margin-top: 5em;
 
   .row {
-    margin-bottom: 50px;
+    margin-bottom: 3.125em;
   }
 
   img {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
   }
 
   .text-container {
@@ -211,25 +217,25 @@ header {
 
   .pic-right {
     float: right;
-    margin-left: 50px;
-    margin-right: 120px;
+    margin-left: 3.125em;
+    margin-right: 7.5em;
   }
 
   .pic-left {
     float: left;
-    margin-right: 50px;
-    margin-left: 120px;
+    margin-right: 3.125em;
+    margin-left: 7.5em;
   }
 
   h2 {
-    font-size: 21px;
+    font-size: 1.25em;
     font-weight: lighter;
     letter-spacing: 2.3px;
-    margin-bottom: 22px;
+    margin-bottom: 1.375em;
   }
 
   p {
-    font-size: 16px;
+    font-size: 1em;
     font-weight: lighter;
     line-height: 1.6;
   }
@@ -240,15 +246,15 @@ header {
 // ------ FOOTER ------
 
 footer {
-  margin-top: 100px;
-  padding-top: 60px;
-  padding-bottom: 80px;
-  min-height: 300px;
+  margin-top: 6.25em;
+  padding-top: 3.75em;
+  padding-bottom: 5em;
+  min-height: 18.75em;
   background-color: $dark-blue;
 
   span {
     color: #FFFFFF;
-    font-size: 13px;
+    font-size: .82em;
     letter-spacing: 1.3px;
     font-weight: lighter;
   }
@@ -256,31 +262,31 @@ footer {
   .links-title {
     display: inline-block;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
   }
 
   a {
     display: inline-block;
     margin-bottom: 5px;
-    font-size: 13px;
+    font-size: .82em;
     font-weight: lighter;
     width: 100%;
   }
 
   form {
-    margin-top: 20px;
+    margin-top: 1.25em;
   }
 
   .form-control {
-    margin-bottom: 14px;
-    min-width: 260px;
-    min-height: 46px;
+    margin-bottom: .875em;
+    min-width: 16.25em;
+    min-height: 2.875em;
     border-radius: 0;
   }
 
   .btn {
-    min-width: 190px;
-    min-height: 46px;
+    min-width: 11.875em;
+    min-height: 2.875em;
   }
 }
 
@@ -292,11 +298,127 @@ footer {
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
+  header {
+    height: 2.5em;
 
+    .cat-logo {
+      width: 4em;
+      height: auto;
+      margin-left: .75em;
+    }
+
+    .nav-menu-text {
+      display: none;
+    }
+
+    .hamburger-btn {
+      margin-right: .75em;
+      width: .8125em;
+      height: auto;
+    }
+  }
+
+  #banner {
+
+    .btn {
+      // width: ;
+      // height: ;
+    }
+  }
+
+  #blog-posts {
+    margin-top: 1em;
+  }
+
+  #features-overview {
+
+  }
+
+  footer {
+
+  }
 }
 
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+}
 
-@media screen
-and (min-width : 768px) {
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Styles */
+}
 
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+  header {
+
+  }
+
+  #banner {
+
+  }
+
+  #blog-posts {
+
+  }
+
+  #features-overview {
+
+  }
+
+  footer {
+
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+  header {
+
+  }
+
+  #banner {
+
+  }
+
+  #blog-posts {
+
+  }
+
+  #features-overview {
+
+  }
+
+  footer {
+
+  }
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
 }
