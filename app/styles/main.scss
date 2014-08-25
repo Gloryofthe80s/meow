@@ -191,7 +191,7 @@ body {
   color: $light-gray;
   bottom: 1.8em;
   // -- create spaced underline
-  // border-bottom: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
   padding-bottom: 5px;
 }
 
@@ -344,6 +344,9 @@ and (max-device-width : 480px) {
 
   #blog-posts {
 
+    .post-expand {
+      bottom: 1em;
+    }
   }
 
   #features-overview {
