@@ -48,12 +48,12 @@ body {
 
 // ------ HEADER ------
 
-header {
+#header {
   height: 5em;
   position: fixed;
   right: 0;
   left: 0;
-  z-index: 100; //ensure header is always above everything
+  z-index: 100; //ensure #header is always above everything
 
   // ------ Gradient ------
   background: -moz-linear-gradient(top,  rgba(0,17,30,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
@@ -191,7 +191,7 @@ header {
   color: $light-gray;
   bottom: 1.8em;
   // -- create spaced underline
-  border-bottom: 1px solid $light-gray;
+  // border-bottom: 1px solid $light-gray;
   padding-bottom: 5px;
 }
 
@@ -243,7 +243,7 @@ header {
 
 // ------ FOOTER ------
 
-footer {
+#footer {
   margin-top: 6.25em;
   padding-top: 3.75em;
   padding-bottom: 5em;
@@ -308,7 +308,7 @@ and (max-device-width : 480px) {
     font-size: 12px; //scale down ems by 25%
   }
 
-  header {
+  #header {
 
     .cat-logo {
       margin-left: .75em;
@@ -359,11 +359,19 @@ and (max-device-width : 480px) {
     }
   }
 
-  footer {
+  #footer {
     margin-top: 0;
     padding-top: 0;
 
-    .container {
+    .col-md-2 {
+      padding: 0;
+    }
+
+    .col-md-6 {
+      padding: 0;
+    }
+
+    .col-sm-10 {
       padding: 0;
     }
 
@@ -380,6 +388,7 @@ and (max-device-width : 480px) {
 
     ul {
       display: none;
+      padding: 0;
     }
 
     .newsletter-sign-up {
@@ -413,7 +422,7 @@ and (max-width : 320px) {
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
-  header {
+  #header {
 
   }
 
@@ -432,7 +441,7 @@ and (max-device-width : 1024px) {
 
   }
 
-  footer {
+  #footer {
     margin-top: 1.5em;
   }
 }
@@ -456,7 +465,7 @@ and (orientation : portrait) {
 /* Desktops and laptops ----------- */
 @media only screen
 and (min-width : 1224px) {
-  header {
+  #header {
 
   }
 
@@ -475,7 +484,7 @@ and (min-width : 1224px) {
 
   }
 
-  footer {
+  #footer {
     margin-top: 1.5em;
   }
 }
