@@ -111,9 +111,9 @@ body {
   .banner-pic {
     background-image: url(../images/kitty_banner.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     width: 100%;
-    min-height: 43.75em;
+    min-height: 28.75em;
   }
 
   .banner-contents {
@@ -237,8 +237,8 @@ body {
   }
 
   img {
-    display: inline-block;
-    margin-bottom: 1.25em;
+    padding-bottom: 1.25em;
+    margin: 0 auto;
   }
 
   .text-container {
@@ -246,15 +246,15 @@ body {
   }
 
   .pic-right {
-    float: right;
-    margin-left: 3.125em;
-    margin-right: 7.5em;
+    // float: right;
+    // margin-left: 3.125em;
+    // margin-right: 7.5em;
   }
 
   .pic-left {
-    float: left;
-    margin-right: 3.125em;
-    margin-left: 7.5em;
+    // float: left;
+    // margin-right: 3.125em;
+    // margin-left: 7.5em;
   }
 
   h2 {
@@ -363,7 +363,7 @@ and (max-device-width : 480px) {
     }
 
     .lead {
-      margin-top: 5em;
+      margin-top: 3em;
       margin-bottom: .2em;
     }
 
@@ -508,7 +508,16 @@ and (orientation : landscape) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
+  #features-overview {
 
+    .text-container {
+      display: inline-block;
+    }
+
+    img {
+      display: inline-block;
+    }
+  }
 }
 
 /* Desktops and laptops ----------- */
@@ -543,4 +552,76 @@ and (min-width : 1224px) {
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
+}
+
+/* Screen drag (to mobile size) (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 800px) {
+  #footer {
+    margin-top: 0;
+    padding-top: 0;
+
+    .col-md-2 {
+      padding: 0;
+    }
+
+    .col-md-6 {
+      padding: 0;
+    }
+
+    .col-sm-10 {
+      padding: 0;
+    }
+
+    .links-title-container {
+      border-bottom: 1px solid $light-gray;
+    }
+
+    .links-title {
+      padding: 1em 0;
+      margin: 0;
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    ul {
+      display: none;
+      padding: 1em 0;
+      width: 100%;
+      text-align: center;
+      background-color: $middle-navy;
+
+      &.active {
+        display: inline-block;
+      }
+
+      a {
+        color: #FFFFFF;
+      }
+
+      li {
+        font-size: 1.5em;
+      }
+    }
+
+    .links-title {
+      &.active {
+        background-color: $light-navy;
+      }
+    }
+
+    .newsletter-sign-up {
+      padding: 0 3em;
+
+      span {
+        display: block;
+        margin-top: 2em;
+        padding: 0 3em;
+        font-size: 1.12em;
+        letter-spacing: 1.5px;
+        text-align: center;
+      }
+    }
+  }
 }

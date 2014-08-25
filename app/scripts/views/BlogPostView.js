@@ -3,7 +3,7 @@
 
 var BlogPostView = Backbone.View.extend({
     tagName: 'div',
-    className: 'col-md-4',
+    className: 'col-md-4 col-sm-4',
 
     createTemplate: _.template($('#blog-blurb-template').text()),
 

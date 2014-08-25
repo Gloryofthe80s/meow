@@ -10,7 +10,7 @@ $(document).ready(function () {
   // );
 
   // apply responsive text fitting to banner lead text
-  $(".lead").fitText(1.4, { minFontSize: '14px', maxFontSize: '100px' });
+  $(".lead").fitText(.8, { minFontSize: '14px', maxFontSize: '100px' });
 
   //this is incredibly verbose, but since there are only 3 posts, we
   //just want each view to be responsible for itself with event delegation
