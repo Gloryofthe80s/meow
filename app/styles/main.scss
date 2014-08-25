@@ -13,6 +13,9 @@ $blue : #AEDEE4;
 $green : #C9E298;
 $btn-green : #79B600;
 $pink : #FDD7F5;
+$middle-navy: #3D4453;
+$light-navy: #636975;
+
 
 // ------ BASICS ------
 
@@ -149,24 +152,6 @@ body {
   margin-top: 1em;
 }
 
-//add these to .blog-post-container to specify border top colors
-.primary {
-  border-top: 6px solid $green;
-}
-
-.secondary {
-  border-top: 6px solid $blue;
-}
-
-.tertiary {
-  border-top: 6px solid $pink;
-}
-
-//the container for the Backbone view (actual blog post contents)
-.blog-post-expanded {
-
-}
-
 .post-date {
   display: inline-block;
   color: $light-gray;
@@ -183,7 +168,7 @@ body {
   overflow: hidden; //prevents a long title from overlapping box
 }
 
-.post-expand {
+.post-expand-btn {
   display: block;
   position: absolute;
   font-size: .875em;
@@ -193,6 +178,53 @@ body {
   // -- create spaced underline
   border-bottom: 1px solid $light-gray;
   padding-bottom: 5px;
+}
+
+//this is the 'expanded' blog post when the blurb 'read more' is clicked
+.expanded-post-container {
+  margin-top: 2em;
+  border: 1px solid $light-gray;
+  border-top: 6px solid $light-gray;
+  padding: 1em 1em;
+
+  .post-date {
+    display: block;
+    margin-top: 1em;
+  }
+
+  .post-title {
+    display: block;
+  }
+
+  .post-body {
+    display: block;
+    padding-bottom: 2.5em;
+  }
+
+  .post-close-btn {
+
+    position: absolute;
+    bottom: 1.8em;
+    font-size: .875em;
+    letter-spacing: 1.6px;
+    color: $light-gray;
+    // -- create spaced underline
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: .6em;
+  }
+}
+
+//add these to .blog-post-container (and expanded) to specify border top colors
+.primary {
+  border-top: 6px solid $green;
+}
+
+.secondary {
+  border-top: 6px solid $blue;
+}
+
+.tertiary {
+  border-top: 6px solid $pink;
 }
 
 // ------ FEATURES OVERVIEW ------
@@ -342,13 +374,6 @@ and (max-device-width : 480px) {
     }
   }
 
-  #blog-posts {
-
-    .post-expand {
-      bottom: 1em;
-    }
-  }
-
   #features-overview {
 
     .pic-right {
@@ -391,7 +416,28 @@ and (max-device-width : 480px) {
 
     ul {
       display: none;
-      padding: 0;
+      padding: 1em 0;
+      width: 100%;
+      text-align: center;
+      background-color: $middle-navy;
+
+      &.active {
+        display: inline-block;
+      }
+
+      a {
+        color: #FFFFFF;
+      }
+
+      li {
+        font-size: 1.5em;
+      }
+    }
+
+    .links-title {
+      &.active {
+        background-color: $light-navy;
+      }
     }
 
     .newsletter-sign-up {

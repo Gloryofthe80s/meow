@@ -3,22 +3,28 @@
 
 var BlogPostExpandedView = Backbone.View.extend({
     tagName: 'div',
-    className: 'blog-post-expanded',
+    className: 'col-md-12',
+
+    createTemplate: _.template($('#full-article-template').text()),
+
+    removeSelf : function() {
+        this.remove();
+    },
 
     events: {
-
+        'click .post-close-btn' : 'removeSelf'
     },
 
     initialize: function() {
-        $('#answer').append(this.el);
+        $('.full-article-container').html('');
+        $('.full-article-container').append(this.el);
 
         this.render();
     },
 
     render: function() {
-        var rendered= this.$el.html('<span>Right on!</span>');
-        rendered.hide().fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).delay(1000).fadeOut('slow', function() {
-            this.remove();
-        });
+        var renderedTemplate = this.createTemplate(this.model.attributes);
+
+        var rendered = this.$el.html(renderedTemplate);
     }
 });

@@ -3,16 +3,21 @@
 
 var BlogPostView = Backbone.View.extend({
     tagName: 'div',
-    className: 'blog-post-contents',
+    className: 'col-md-4',
 
-    createTemplate: _.template($('#player-score-template').text()),
+    createTemplate: _.template($('#blog-blurb-template').text()),
+
+    expandPost: function() {
+        console.log('hey!')
+            new BlogPostExpandedView({model: this.model});
+        },
 
     events: {
-
+        'click .post-expand-btn' : 'expandPost'
     },
 
     initialize: function() {
-        $('#answer').append(this.el);
+        $('#blog-posts').find('.row').append(this.el);
 
         this.render();
     },
@@ -20,8 +25,6 @@ var BlogPostView = Backbone.View.extend({
     render: function() {
         var renderedTemplate = this.createTemplate(this.model.attributes);
 
-        var rendered = this.$el.html(renderedTemplate);
-
-        rendered.hide().fadeIn('slow');
+        var rendered = this.$el.append(renderedTemplate);
     }
 });
