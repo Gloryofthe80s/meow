@@ -3,7 +3,7 @@
 
 var BlogPostExpandedView = Backbone.View.extend({
     tagName: 'div',
-    className: 'correct center-block',
+    className: 'blog-post-expanded',
 
     events: {
 
