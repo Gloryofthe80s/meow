@@ -163,7 +163,7 @@ header {
 }
 
 //the container for the Backbone view (actual blog post contents)
-.blog-post-contents {
+.blog-post-expanded {
 
 }
 
@@ -363,10 +363,6 @@ and (max-device-width : 480px) {
     margin-top: 0;
     padding-top: 0;
 
-    .col-md-6 {
-      padding: 0 3em;
-    }
-
     .container {
       padding: 0;
     }
@@ -386,10 +382,13 @@ and (max-device-width : 480px) {
       display: none;
     }
 
-    .col-md-6 {
+    .newsletter-sign-up {
+      padding: 0 3em;
+
       span {
         display: block;
         margin-top: 2em;
+        padding: 0 3em;
         font-size: 1.12em;
         letter-spacing: 1.5px;
         text-align: center;
@@ -420,6 +419,9 @@ and (max-device-width : 1024px) {
 
   #banner {
 
+    .banner-pic {
+      min-height: 29.75em;
+    }
   }
 
   #blog-posts {
@@ -431,7 +433,7 @@ and (max-device-width : 1024px) {
   }
 
   footer {
-
+    margin-top: 1.5em;
   }
 }
 
@@ -448,7 +450,7 @@ and (orientation : landscape) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
-/* Styles */
+
 }
 
 /* Desktops and laptops ----------- */
@@ -460,6 +462,9 @@ and (min-width : 1224px) {
 
   #banner {
 
+    .banner-pic {
+      min-height: 34em;
+    }
   }
 
   #blog-posts {
@@ -471,7 +476,7 @@ and (min-width : 1224px) {
   }
 
   footer {
-
+    margin-top: 1.5em;
   }
 }
 
