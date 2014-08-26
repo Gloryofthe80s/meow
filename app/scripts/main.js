@@ -1,19 +1,9 @@
 $(document).ready(function () {
 
-  // VISUAL ANIMATIONS
-  // $('.nav-menu-container').hover(
-  //   function() {
-  //     $(this).addClass('nav-hover-active');
-  //   }, function() {
-  //     $(this).removeClass('nav-hover-active');
-  //   }
-  // );
-
   // apply responsive text fitting to banner lead text
   $(".lead").fitText(.8, { minFontSize: '14px', maxFontSize: '100px' });
 
-  //this is incredibly verbose, but since there are only 3 posts, we
-  //just want each view to be responsible for itself with event delegation
+  // this is incredibly verbose, but since there are only 3 posts, we just want each view to be responsible for itself with event delegation coming from the BackBone Views themselves.
   var initializeBlogPosts = function() {
     var article1 = new BlogPost(); //default model
 
@@ -34,11 +24,30 @@ $(document).ready(function () {
 
   initializeBlogPosts();
 
+  // toggle css drawers of footer contents in mobile views
   $('.links-title-container').on('click', function() {
-    console.log('sup');
     $(this).siblings('ul').toggleClass('active');
     $(this).toggleClass('active');
     $(this).children('span').toggleClass('active');
+  });
+
+  // snapper (the side menu drawer)
+  var snapper = new Snap({
+    element: document.getElementById('content'),
+    dragger: null,
+    disable: null,
+    addBodyClasses: true,
+    hyperextensible: true,
+    resistance: 0.5,
+    flickThreshold: 50,
+    transitionSpeed: 0.3,
+    easing: 'ease',
+    maxPosition: 266,
+    minPosition: -266,
+    tapToClose: true,
+    touchToDrag: true,
+    slideIntent: 40,
+    minDragDistance: 5
   });
 
 });

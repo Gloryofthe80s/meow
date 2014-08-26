@@ -8,8 +8,9 @@ var BlogPostView = Backbone.View.extend({
     createTemplate: _.template($('#blog-blurb-template').text()),
 
     expandPost: function() {
-        console.log('hey!')
-            new BlogPostExpandedView({model: this.model});
+            //pass the clicked DOM element to the expanded view in the options obj
+            var theClickedPost = this.$el;
+            new BlogPostExpandedView({model: this.model, clickedPost: theClickedPost});
         },
 
     events: {
