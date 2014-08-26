@@ -31,23 +31,4 @@ $(document).ready(function () {
     $(this).children('span').toggleClass('active');
   });
 
-  // snapper (the side menu drawer)
-  var snapper = new Snap({
-    element: document.getElementById('content'),
-    dragger: null,
-    disable: null,
-    addBodyClasses: true,
-    hyperextensible: true,
-    resistance: 0.5,
-    flickThreshold: 50,
-    transitionSpeed: 0.3,
-    easing: 'ease',
-    maxPosition: 266,
-    minPosition: -266,
-    tapToClose: true,
-    touchToDrag: true,
-    slideIntent: 40,
-    minDragDistance: 5
-  });
-
 });
