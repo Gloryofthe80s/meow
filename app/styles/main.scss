@@ -392,37 +392,48 @@ and (max-device-width : 480px) {
     }
 
     .links-title {
-      padding: 1em 0;
-      margin: 0;
-      font-size: 1.5em;
-      text-align: center;
-    }
+          padding: 1em 0;
+          margin: 0;
+          font-size: 1.5em;
+          text-align: center;
+          -webkit-transition: all 0.75s ease;
+          -moz-transition: all 0.75s ease;
+          -o-transition: all 0.75s ease;
+          transition: all 0.75s ease;
 
-    ul {
-      display: none;
-      padding: 1em 0;
-      width: 100%;
-      text-align: center;
-      background-color: $middle-navy;
+          &.active {
+            color: $blue;
+            background-size: $light-navy;
+          }
+        }
 
-      &.active {
-        display: inline-block;
-      }
+        ul {
+          // display: none;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          max-height: 0;
+          overflow: hidden;
+          text-align: center;
+          background-color: $middle-navy;
+          -webkit-transition: all 0.75s ease;
+          -moz-transition: all 0.75s ease;
+          -o-transition: all 0.75s ease;
+          transition: all 0.75s ease;
 
-      a {
-        color: #FFFFFF;
-      }
+          &.active {
+            // display: inline-block;
+            max-height: 26em;
+          }
 
-      li {
-        font-size: 1.5em;
-      }
-    }
+          a {
+            color: #FFFFFF;
+          }
 
-    .links-title {
-      &.active {
-        background-color: $light-navy;
-      }
-    }
+          li {
+            font-size: 1.5em;
+          }
+        }
 
     .newsletter-sign-up {
       padding: 0 3em;
@@ -560,10 +571,10 @@ and (max-width : 767px) {
       margin: 0;
       font-size: 1.5em;
       text-align: center;
-      transition-delay: 0s;
-      transition-duration: .5s;
-      transition-property: all;
-      transition-timing-function: ease;
+      -webkit-transition: all 0.75s ease;
+      -moz-transition: all 0.75s ease;
+      -o-transition: all 0.75s ease;
+      transition: all 0.75s ease;
 
       &.active {
         color: $blue;
@@ -580,10 +591,10 @@ and (max-width : 767px) {
       overflow: hidden;
       text-align: center;
       background-color: $middle-navy;
-      transition-delay: 0s;
-      transition-duration: 1s;
-      transition-property: all;
-      transition-timing-function: ease;
+      -webkit-transition: all 0.75s ease;
+      -moz-transition: all 0.75s ease;
+      -o-transition: all 0.75s ease;
+      transition: all 0.75s ease;
 
       &.active {
         // display: inline-block;
