@@ -23,7 +23,7 @@ var BlogPostExpandedView = Backbone.View.extend({
         var clickedPost = this.options.clickedPost;
 
         //check where to place the view based on screen width
-        if (matchMedia('only screen and (max-width: 768px)').matches ||
+        if (matchMedia('only screen and (max-width: 767px)').matches ||
             matchMedia('only screen and (max-device-width: 480px)').matches) {
             //kill this view in case content was there already
             $('.full-article-container').html('');
